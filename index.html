@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HazardControl — Aesthetic Web Template</title>
+  <link rel="stylesheet" href="oc.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">HazardControl </a>
+      <nav>
+        <button class="menu-toggle">Menu</button>
+        <ul id="desktop-menu">
+          <li><a href="#report">Report Hazard</a></li>
+          <li><a href="#gallery">Analytics</a></li>
+          <li><a href="#pricing">Resources</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <button class="theme-toggle">Theme</button>
+        <a class="btn secondary" href="file:///C:/Users/asus/Desktop/project%20o/login.html">Login</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="container hide">
+      <ul>
+        <li><a href="#report">Report Hazard</a></li>
+        <li><a href="#gallery">Analytics</a></li>
+        <li><a href="#pricing">Resources</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+   <section style="padding: 3rem; font-family: Inter, system-ui, sans-serif;" class="container">
+    <h2 style="margin-bottom:1rem;">“Real People. Real Data. Real-Time Ocean Safety.”</h2>
+
+    <!-- Marquee container -->
+    <div class="marquee" aria-hidden="false" role="region" aria-label="Scrolling announcements">
+      <!-- .marquee__inner contains the message repeated twice for a seamless loop -->
+      <div class="marquee__inner">
+        <span class="marquee__text">⚠️ New hazard reported • Coastal advisory issued • Community alert • </span>
+        <span class="marquee__text">⚠️ New hazard reported • Coastal advisory issued • Community alert • </span>
+        <span class="marquee__text">⚠️ New hazard reported • Coastal advisory issued • Community alert • </span>
+      </div>
+    </div>
+
+  </section>
+
+  
+   <div>
+        <svg
+          class="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shape-rendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="0"
+              fill="rgba(255,255,255,0.7"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="3"
+              fill="rgba(255,255,255,0.5)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgba(255,255,255,0.3)"
+            />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+        </svg>
+      </div>
+      <!--Waves end-->
+    </div>
+
+  <main id="home">
+   <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <h1>“Mapping the Waves, Amplifying the Voices.”</h1>
+        <p class="lead">An integrated digital platform that combines crowdsourced ocean hazard reporting with social media analytics to deliver real-time insights, enhance coastal safety, and support sustainable marine management.</p>
+        <div class="cta-row">
+          <a class="btn" href="#report">Report Hazard</a>
+          <a class="btn secondary" href="#demo">View Analytics</a>
+        </div>
+      </div>
+      <div>
+        <div class="mockup"></div>
+      </div>
+    </div>
+  </section>
+
+
+    <section id="features" class="container">
+      <h2>Features</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Real-Time Hazard Reports</h3>
+          <p>Enable citizens to report ocean hazards instantly through a crowdsourced system.</p>
+        </article>
+        <article class="card">
+          <h3>Social Media Insights</h3>
+          <p>Analyze public conversations and trends related to marine safety and hazards.</p>
+        </article>
+        <article class="card">
+          <h3>Data Visualization</h3>
+          <p>Interactive maps and dashboards provide clear insights for decision makers.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="report">
+<h3>Report a Hazard</h3>
+<form id="hazardForm">
+<input type="text" id="hazardTitle" placeholder="Hazard Title" required />
+<textarea id="hazardDescription" rows="4" placeholder="Describe the hazard" required></textarea>
+<input type="file" id="hazardImage" accept="image/*" />
+<button type="submit">Submit Hazard</button>
+</form>
+</section>
+
+
+<section class="section" id="reports">
+<h3>All Reported Hazards</h3>
+<div id="reportsList" class="reports-list">
+<p>No reports submitted yet.</p>
+</div>
+</section>  
+    
+
+   
+
+    
+
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>© 2025 Nova. Built with HTML, CSS & JS.</p>
+  </footer>
+
+  <script src="pro.js"></script>
+</body>
+</html>
