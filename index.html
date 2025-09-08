@@ -90,6 +90,34 @@
       </div>
       <!--Waves end-->
     </div>
+  <script>
+  function updateWaves() {
+    const bodyDark = document.body.classList.contains("dark");
+    const waveUses = document.querySelectorAll(".waves use");
+
+    if (bodyDark) {
+      // Dark theme → light blue waves
+      waveUses[0].setAttribute("fill", "rgba(173, 216, 230, 0.7)");
+      waveUses[1].setAttribute("fill", "rgba(173, 216, 230, 0.5)");
+      waveUses[2].setAttribute("fill", "rgba(173, 216, 230, 0.3)");
+      waveUses[3].setAttribute("fill", "#add8e6");
+    } else {
+      // Light theme → soft navy waves
+      waveUses[0].setAttribute("fill", "rgba(0, 31, 63, 0.7)");
+      waveUses[1].setAttribute("fill", "rgba(0, 31, 63, 0.5)");
+      waveUses[2].setAttribute("fill", "rgba(0, 31, 63, 0.3)");
+      waveUses[3].setAttribute("fill", "#001f3f");
+    }
+  }
+
+  // Run on page load
+  document.addEventListener("DOMContentLoaded", updateWaves);
+
+  // If you have a theme toggle button, re-run when theme changes
+  const observer = new MutationObserver(updateWaves);
+  observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+</script>
+
 
   <main id="home">
    <section class="hero" id="home">
@@ -168,3 +196,4 @@
   <script src="pro.js"></script>
 </body>
 </html>
+
