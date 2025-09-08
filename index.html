@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HazardControl — Coastes under control</title>
+  <title>HazardControl — Aesthetic Web Template</title>
   <link rel="stylesheet" href="oc.css">
 </head>
 <body>
@@ -90,7 +90,9 @@
       </div>
       <!--Waves end-->
     </div>
-  <script>
+
+
+    <script>
   function updateWaves() {
     const bodyDark = document.body.classList.contains("dark");
     const waveUses = document.querySelectorAll(".waves use");
@@ -135,25 +137,90 @@
       </div>
     </div>
   </section>
+<!-- About the Website -->
+<section class="section container" id="about" aria-labelledby="about-heading">
+  <h3 id="about-heading">About the Website</h3>
+  <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+    This website serves as a unified digital space where technology and community collaboration meet
+    to make oceans safer. It connects individuals, organizations, and responders in real time to
+    ensure hazards are reported quickly, verified effectively, and acted upon responsibly.
+  </p>
 
+  <div class="cards" role="list" aria-label="About features" style="text-align: center;">
+    <article class="card" role="listitem">
+      <h4>User-Friendly Interface</h4>
+      <p>
+        The site is designed with simplicity in mind, allowing anyone to submit hazard reports
+        without needing technical expertise. Clean navigation ensures smooth browsing on both
+        mobile and desktop devices.
+      </p>
+    </article>
 
-    <section id="features" class="container">
-      <h2>Features</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Real-Time Hazard Reports</h3>
-          <p>Enable citizens to report ocean hazards instantly through a crowdsourced system.</p>
-        </article>
-        <article class="card">
-          <h3>Social Media Insights</h3>
-          <p>Analyze public conversations and trends related to marine safety and hazards.</p>
-        </article>
-        <article class="card">
-          <h3>Data Visualization</h3>
-          <p>Interactive maps and dashboards provide clear insights for decision makers.</p>
-        </article>
-      </div>
-    </section>
+    <article class="card" role="listitem">
+      <h4>Community Participation</h4>
+      <p>
+        By empowering citizens to share information, the platform creates a network of
+        “digital guardians of the sea.” Each contribution strengthens awareness and preparedness
+        for maritime safety.
+      </p>
+    </article>
+
+    <article class="card" role="listitem">
+      <h4>Integrated Analytics</h4>
+      <p>
+        Reports are complemented by automated social media monitoring and data visualization,
+        giving a holistic view of ongoing hazards. This helps authorities prioritize and act
+        faster in emergencies.
+      </p>
+    </article>
+  </div>
+</section>
+<div class="contain">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9291159.059511589!2d72.47414312725437!3d17.028882250950957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2d7672df89b%3A0x3c98247d517e599a!2sIndian%20Coast%20Guard%20Headquarters!5e0!3m2!1sen!2sin!4v1757352042880!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<!-- Dashboard: Past Hazard Reports -->
+<section class="section container" id="dashboard" aria-labelledby="dashboard-heading">
+  <h3 id="dashboard-heading">Hazard Dashboard</h3>
+  <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+    Explore the record of hazards reported by the community. Each entry includes the type of hazard,
+    its description, location, and the date of submission.
+  </p>
+
+  <!-- Reports Table -->
+  <div class="reports-list">
+    <table style="width: 100%; border-collapse: collapse; text-align: left;">
+      <thead>
+        <tr style="background: var(--secondary); color: var(--text);">
+          <th style="padding: 0.8rem; border-bottom: 2px solid var(--primary);">Date</th>
+          <th style="padding: 0.8rem; border-bottom: 2px solid var(--primary);">Hazard Type</th>
+          <th style="padding: 0.8rem; border-bottom: 2px solid var(--primary);">Location</th>
+          <th style="padding: 0.8rem; border-bottom: 2px solid var(--primary);">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 0.8rem; border-bottom: 1px solid var(--secondary);">2025-09-01</td>
+          <td style="padding: 0.8rem; border-bottom: 1px solid var(--secondary);">Oil Spill</td>
+          <td style="padding: 0.8rem; border-bottom: 1px solid var(--secondary);">Bay of Bengal</td>
+          <td style="padding: 0.8rem; border-bottom: 1px solid var(--secondary);">Large oil slick spotted 5km offshore.</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.8rem; border-bottom: 1px solid var(--secondary);">2025-08-27</td>
+          <td style="padding: 0.8rem; border-bottom: 1px solid var(--secondary);">Plastic Waste</td>
+          <td style="padding: 0.8rem; border-bottom: 1px solid var(--secondary);">Arabian Sea</td>
+          <td style="padding: 0.8rem; border-bottom: 1px solid var(--secondary);">Cluster of floating plastic bottles reported by fishermen.</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.8rem; border-bottom: 1px solid var(--secondary);">2025-08-15</td>
+          <td style="padding: 0.8rem; border-bottom: 1px solid var(--secondary);">Toxic Algae</td>
+          <td style="padding: 0.8rem; border-bottom: 1px solid var(--secondary);">Andaman Coast</td>
+          <td style="padding: 0.8rem; border-bottom: 1px solid var(--secondary);">Unusual green patch in shallow waters observed.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
     <section class="section" id="report">
 <h3>Report a Hazard</h3>
@@ -196,5 +263,3 @@
   <script src="pro.js"></script>
 </body>
 </html>
-
-
