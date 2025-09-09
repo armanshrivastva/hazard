@@ -542,8 +542,7 @@ footer {
 }
 
 .hero-grid2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
   gap: 2rem;
   max-width: 1200px;   /* keeps it from stretching too wide */
   margin: 0 auto;      /* centers the grid itself */
@@ -599,6 +598,7 @@ footer {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
+
 
 
 
