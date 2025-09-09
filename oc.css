@@ -130,6 +130,40 @@ header {
   hyphens: auto;
   line-height: 1.6;
 }
+/* Responsive breakpoints */
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero .lead {
+    text-align: center;
+  }
+
+  .cta-row {
+    justify-content: center;
+  }
+
+  .mockup {
+    height: 220px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
 .lead {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
@@ -496,6 +530,7 @@ footer {
     justify-content: center;
     flex-direction: column;
   }
+
 
 
 
