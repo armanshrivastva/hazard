@@ -190,6 +190,10 @@ section {
 .section-lead {
   margin-bottom: 2rem;
   color: gray;
+    max-width: 1200px;   /* keeps it from stretching too wide */
+  margin: 0 auto;      /* centers the grid itself */
+  text-align: center;  /* centers text inside */
+  
 }
 
 .cards {
@@ -530,6 +534,7 @@ footer {
     justify-content: center;
     flex-direction: column;
   }
+
 
 
 
