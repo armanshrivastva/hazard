@@ -117,19 +117,18 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
-   text-align: justify;
-  hyphens: auto;
-  line-height: 1.6;
+ 
 }
 
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  
+}
+.hero p {
    text-align: justify;
   hyphens: auto;
   line-height: 1.6;
-}
-
 .lead {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
@@ -496,6 +495,7 @@ footer {
     justify-content: center;
     flex-direction: column;
   }
+
 
 
 
