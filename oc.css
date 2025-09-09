@@ -129,6 +129,7 @@ header {
    text-align: justify;
   hyphens: auto;
   line-height: 1.6;
+}
 .lead {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
@@ -495,6 +496,7 @@ footer {
     justify-content: center;
     flex-direction: column;
   }
+
 
 
 
