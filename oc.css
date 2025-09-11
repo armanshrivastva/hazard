@@ -648,5 +648,19 @@ footer.small {
   font-size: 0.9rem;
   color: gray;
 }
+/* Fix tall cards on mobile */
+@media (max-width: 768px) {
+  .card {
+    max-height: 350px;       /* prevent very tall cards */
+    overflow-y: auto;        /* scroll if content exceeds */
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;  /* stack cards without stretching */
+    gap: 1rem;
+  }
+}
+
 
 
