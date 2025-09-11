@@ -151,111 +151,7 @@
 
 
 </section>
-<section>
-  <div class="app">
-    <!-- LEFT: Reporting form -->
-    <aside class="card">
-      <h2>Report an Ocean Hazard</h2>
-      <p class="lead">Quickly submit hazards (oil spill, debris, strong currents etc.) — crowd-sourced and geo-tagged.</p>
-      <label>Hazard Type</label>
-      <select id="hazardType">
-        <option value="oil">Oil slick / spill</option>
-        <option value="debris">Floating debris</option>
-        <option value="weather">Severe weather / storm</option>
-        <option value="wildlife">Threat to wildlife</option>
-        <option value="other">Other</option>
-      </select>
 
-      <label style="margin-top:10px">Location (lat, lng or description)</label>
-      <input id="location" type="text" placeholder="e.g. 21.1458, 72.7758 or 'near pier 4'" />
-
-      <label style="margin-top:10px">Description</label>
-      <textarea id="description" placeholder="Describe what you see, time, and any immediate danger"></textarea>
-
-      <label style="margin-top:10px">Photo / Screenshot</label>
-      <input id="file" type="file" accept="image/*" />
-      <div class="file-preview" id="filePreview" style="display:none"></div>
-
-      <div style="display:flex;gap:10px;margin-top:12px;align-items:center">
-        <button class="btn" id="submitReport">Submit Report</button>
-        <button class="btn secondary" id="clearForm">Clear</button>
-      </div>
-
-      <div style="margin-top:14px" class="muted small">Submitted reports will appear in the analytics feed and are optionally used to train AI hazard detectors (demo only).</div>
-
-      <hr style="margin:16px 0;border:none;border-top:1px solid #eef6f9" />
-      <div class="map-placeholder">Map preview (replace with Leaflet/Mapbox)</div>
-    </aside>
-
-    <!-- MIDDLE: Chat -->
-    <section class="chat-window">
-      <div class="chat-top">
-        <div class="bot-pill">OH</div>
-        <div>
-          <div style="font-weight:700">Ocean Hazard Assistant</div>
-          <div class="muted small">Ask about reports, safety advice or social analytics</div>
-        </div>
-        <div style="margin-left:auto" class="muted small">Demo — local AI emulation</div>
-      </div>
-
-      <div class="chat-stream" id="chatStream">
-        <div class="msg bot">
-          <div class="meta">OceanBot · just now</div>
-          <div>Hello! I'm OceanBot. I can help summarize reports, suggest safety action, or surface social posts about hazards. Try typing: "latest reports near Mumbai" or "what to do for oil spill"</div>
-        </div>
-      </div>
-
-      <div class="chat-input">
-        <input id="chatInput" placeholder="Ask OceanBot..." />
-        <button class="btn" id="sendBtn">Send</button>
-      </div>
-    </section>
-
-    <!-- RIGHT: Analytics / Social -->
-    <aside class="analytics">
-      <div class="card">
-        <h2>Quick Stats</h2>
-        <div class="stat-row" style="margin-top:10px">
-          <div class="stat">
-            <div class="muted small">Reports (24h)</div>
-            <h3 id="statReports">12</h3>
-            <div class="muted small">New: 3</div>
-          </div>
-          <div class="stat">
-            <div class="muted small">Alerts</div>
-            <h3 id="statAlerts">2</h3>
-            <div class="muted small">High: 1</div>
-          </div>
-        </div>
-
-        <div style="margin-top:12px">
-          <div class="muted small">Top hazard tags</div>
-          <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
-            <div class="tag">#oil</div>
-            <div class="tag">#debris</div>
-            <div class="tag">#storm</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card feed">
-        <h3 style="margin-top:0">Social & Reports Feed</h3>
-        <div id="feedList"></div>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-top:0">Quick actions</h3>
-        <div style="display:flex;gap:8px;margin-top:10px">
-          <button class="btn" id="exportCSV">Export CSV</button>
-          <button class="btn secondary" id="connectAPI">Connect API</button>
-        </div>
-        <div style="margin-top:10px" class="muted small">This demo stores data locally in your browser. Connect a backend to persist or call real AI APIs.</div>
-      </div>
-    </aside>
-  </div>
-  
-</section>
-  
 <div class="contain">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9291159.059511589!2d72.47414312725437!3d17.028882250950957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2d7672df89b%3A0x3c98247d517e599a!2sIndian%20Coast%20Guard%20Headquarters!5e0!3m2!1sen!2sin!4v1757352042880!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
@@ -348,6 +244,7 @@
 
 </body>
 </html>
+
 
 
 
