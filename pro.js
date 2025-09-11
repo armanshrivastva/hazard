@@ -105,4 +105,114 @@ reportsList.appendChild(reportCard);
 
 this.reset();
 alert("Hazard report submitted successfully!");
+
+});
+
+// Chatbot toggle
+const chatbotWidget = document.getElementById("chatbot-widget");
+const chatbotToggle = document.getElementById("chatbot-toggle");
+const chatbotClose = document.getElementById("chatbot-close");
+const chatbotMessages = document.getElementById("chatbot-messages");
+const chatbotInput = document.getElementById("chatbot-text");
+const chatbotSend = document.getElementById("chatbot-send");
+
+chatbotToggle.addEventListener("click", () => {
+  chatbotWidget.style.display = "flex";
+  chatbotToggle.style.display = "none";
+});
+
+chatbotClose.addEventListener("click", () => {
+  chatbotWidget.style.display = "none";
+  chatbotToggle.style.display = "block";
+});
+
+// Add message to chat window
+function addChatMessage(sender, text) {
+  const msg = document.createElement("div");
+  msg.classList.add("msg", sender);
+  msg.innerText = text;
+  chatbotMessages.appendChild(msg);
+  chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+}
+
+// Local fallback reply
+function localAIReply(text) {
+  if (text.toLowerCase().includes("oil")) {
+    return "Oil spills can spread rapidly. Please report location details for responders.";
+  } else if (text.toLowerCase().includes("plastic")) {
+    return "Plastic waste harms marine life. Consider tagging the hazard on the map.";
+  }
+  return "I'm OceanBot 🌊. I can help with hazard reports, analytics, or ocean safety info.";
+}
+
+// Send user message
+function sendMessage() {
+  const text = chatbotInput.value.trim();
+  if (!text) return;
+  addChatMessage("user", text);
+  chatbotInput.value = "";
+
+  // 🚀 Swap this with OpenAI fetch if backend is ready
+  setTimeout(() => {
+    addChatMessage("bot", localAIReply(text));
+  }, 600);
+}
+
+chatbotSend.addEventListener("click", sendMessage);
+chatbotInput.addEventListener("keypress", e => {
+  if (e.key === "Enter") sendMessage();
+});
+// Chatbot toggle
+const chatbotWidget = document.getElementById("chatbot-widget");
+const chatbotToggle = document.getElementById("chatbot-toggle");
+const chatbotClose = document.getElementById("chatbot-close");
+const chatbotMessages = document.getElementById("chatbot-messages");
+const chatbotInput = document.getElementById("chatbot-text");
+const chatbotSend = document.getElementById("chatbot-send");
+
+chatbotToggle.addEventListener("click", () => {
+  chatbotWidget.style.display = "flex";
+  chatbotToggle.style.display = "none";
+});
+
+chatbotClose.addEventListener("click", () => {
+  chatbotWidget.style.display = "none";
+  chatbotToggle.style.display = "block";
+});
+
+// Add message to chat window
+function addChatMessage(sender, text) {
+  const msg = document.createElement("div");
+  msg.classList.add("msg", sender);
+  msg.innerText = text;
+  chatbotMessages.appendChild(msg);
+  chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+}
+
+// Local fallback reply
+function localAIReply(text) {
+  if (text.toLowerCase().includes("oil")) {
+    return "Oil spills can spread rapidly. Please report location details for responders.";
+  } else if (text.toLowerCase().includes("plastic")) {
+    return "Plastic waste harms marine life. Consider tagging the hazard on the map.";
+  }
+  return "I'm OceanBot 🌊. I can help with hazard reports, analytics, or ocean safety info.";
+}
+
+// Send user message
+function sendMessage() {
+  const text = chatbotInput.value.trim();
+  if (!text) return;
+  addChatMessage("user", text);
+  chatbotInput.value = "";
+
+  // 🚀 Swap this with OpenAI fetch if backend is ready
+  setTimeout(() => {
+    addChatMessage("bot", localAIReply(text));
+  }, 600);
+}
+
+chatbotSend.addEventListener("click", sendMessage);
+chatbotInput.addEventListener("keypress", e => {
+  if (e.key === "Enter") sendMessage();
 });
