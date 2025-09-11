@@ -254,10 +254,41 @@
   </footer>
 
   <script src="pro.js"></script>
- 
+ <script>
+const chatWindow = document.getElementById("chatWindow");
+const chatInput = document.getElementById("chatInput");
+const sendBtn = document.getElementById("sendBtn");
+
+function addMessage(sender, text) {
+  const msg = document.createElement("div");
+  msg.classList.add("chat-message", sender);
+  msg.textContent = text;
+  chatWindow.appendChild(msg);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+}
+
+sendBtn.addEventListener("click", () => {
+  const text = chatInput.value.trim();
+  if (!text) return;
+  addMessage("user", text);
+  chatInput.value = "";
+
+  // Simple placeholder AI response
+  setTimeout(() => {
+    addMessage("bot", "🤖 Processing your query about ocean hazards...");
+  }, 500);
+});
+
+// Allow Enter key to send
+chatInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") sendBtn.click();
+});
+</script>
+
 
 </body>
 </html>
+
 
 
 
