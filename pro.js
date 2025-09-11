@@ -216,3 +216,9 @@ chatbotSend.addEventListener("click", sendMessage);
 chatbotInput.addEventListener("keypress", e => {
   if (e.key === "Enter") sendMessage();
 });
+
+// Chatbot toggle
+const chatbotWidget = document.getElementById("chatbot-widget");
+...
+
+
