@@ -69,6 +69,46 @@ header {
   text-decoration: none;
   font-weight: 500;
 }
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar ul li {
+  list-style: none;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--text);
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar ul li::after {
+  content: '';
+  height: 2px;
+  width: 0;
+  background: var(--text);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.3s ease;
+  opacity: 0.8;
+}
+
+.navbar ul li:hover a {
+  color: var(--text);
+  opacity: 1;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
 
 #desktop-menu {
   display: flex;
@@ -534,6 +574,7 @@ footer {
     justify-content: center;
     flex-direction: column;
   }
+
 
 
 
