@@ -481,3 +481,72 @@ iframe {
   flex-direction: column;
 }
 
+
+/* AI Chatbot */
+.chatbot {
+  background: var(--secondary);
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.chat-window {
+  background: var(--bg);
+  border: 1px solid var(--secondary);
+  border-radius: 0.6rem;
+  padding: 1rem;
+  height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.chat-message {
+  margin-bottom: 0.6rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.6rem;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.chat-message.bot {
+  background: var(--secondary);
+  color: var(--text);
+  text-align: left;
+}
+
+.chat-message.user {
+  background: var(--primary);
+  color: #fff;
+  margin-left: auto;
+  text-align: right;
+}
+
+.chat-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid var(--secondary);
+  border-radius: 0.6rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.chat-input button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-input button:hover {
+  background: var(--accent);
+}
