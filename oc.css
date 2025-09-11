@@ -520,9 +520,6 @@ body {
   padding: 0 1rem;
 }
 
-@media (max-width: 1000px) {
-  .app { grid-template-columns: 1fr; }
-}
 
 /* Cards */
 .card {
@@ -651,4 +648,5 @@ footer.small {
   font-size: 0.9rem;
   color: gray;
 }
+
 
