@@ -59,7 +59,6 @@ contactForm.addEventListener("submit", (e) => {
 
   contactForm.reset();
 });
-
 // =================== HAZARD FORM ===================
 const hazardForm = document.getElementById("hazardForm");
 const reportsList = document.getElementById("reportsList");
@@ -75,10 +74,13 @@ function renderReports() {
     return;
   }
 
-  hazardReports.forEach((report) => {
+  hazardReports.forEach((report, index) => {
     const reportCard = document.createElement("div");
     reportCard.classList.add("report-card");
-    reportCard.innerHTML = `<h4>${report.title}</h4><p>${report.desc}</p>`;
+    reportCard.innerHTML = `
+      <h4>${report.title}</h4>
+      <p>${report.desc}</p>
+    `;
 
     if (report.image) {
       const img = document.createElement("img");
@@ -87,6 +89,26 @@ function renderReports() {
       reportCard.appendChild(img);
     }
 
+    // Delete button
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "🗑 Delete";
+    deleteBtn.style.marginTop = "10px";
+    deleteBtn.style.background = "#ef4444";
+    deleteBtn.style.color = "#fff";
+    deleteBtn.style.border = "none";
+    deleteBtn.style.padding = "6px 12px";
+    deleteBtn.style.borderRadius = "5px";
+    deleteBtn.style.cursor = "pointer";
+
+    deleteBtn.addEventListener("click", () => {
+      if (confirm("Are you sure you want to delete this report?")) {
+        hazardReports.splice(index, 1); // remove from array
+        localStorage.setItem("hazardReports", JSON.stringify(hazardReports));
+        renderReports(); // re-render
+      }
+    });
+
+    reportCard.appendChild(deleteBtn);
     reportsList.appendChild(reportCard);
   });
 }
@@ -126,3 +148,4 @@ hazardForm.addEventListener("submit", function (e) {
   this.reset();
   alert("Hazard report submitted successfully!");
 });
+
