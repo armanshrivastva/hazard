@@ -90,15 +90,19 @@ function renderReports() {
     }
 
     // Delete button
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "🗑 Delete";
-    deleteBtn.style.marginTop = "10px";
-    deleteBtn.style.background = "#ef4444";
-    deleteBtn.style.color = "#fff";
-    deleteBtn.style.border = "none";
-    deleteBtn.style.padding = "6px 12px";
-    deleteBtn.style.borderRadius = "5px";
-    deleteBtn.style.cursor = "pointer";
+   // Delete button
+const deleteBtn = document.createElement("button");
+deleteBtn.textContent = "🗑 Delete";
+deleteBtn.style.display = "inline-block";   // ✅ stays small
+deleteBtn.style.fontSize = "14px";          // ✅ smaller text
+deleteBtn.style.marginTop = "8px";
+deleteBtn.style.background = "#ef4444";
+deleteBtn.style.color = "#fff";
+deleteBtn.style.border = "none";
+deleteBtn.style.padding = "4px 8px";        // ✅ compact size
+deleteBtn.style.borderRadius = "4px";
+deleteBtn.style.cursor = "pointer";
+
 
     deleteBtn.addEventListener("click", () => {
       if (confirm("Are you sure you want to delete this report?")) {
@@ -148,4 +152,5 @@ hazardForm.addEventListener("submit", function (e) {
   this.reset();
   alert("Hazard report submitted successfully!");
 });
+
 
