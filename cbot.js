@@ -1,3 +1,22 @@
+// =================== THEME TOGGLE ===================
+const themeBtn = document.querySelector(".theme-toggle");
+const body = document.body;
+
+// Load theme from localStorage
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark");
+  themeBtn.setAttribute("aria-pressed", "true");
+}
+
+// Toggle theme on click
+themeBtn.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  const isDark = body.classList.contains("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+  themeBtn.setAttribute("aria-pressed", isDark.toString());
+});
+
+
 const reports = [];
 const feedList = document.getElementById('feedList');
 const chatStream = document.getElementById('chatStream');
@@ -125,3 +144,4 @@ document.getElementById('connectAPI').addEventListener('click', ()=>{
 
 // initialize
 document.getElementById('statAlerts').innerText = 2;
+
