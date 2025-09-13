@@ -145,7 +145,30 @@ header {
 .hide {
   display: none;
 }
+/* Sections */
+.section {
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
 
+.section h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.contact form, #hazardForm {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
 
 /* Intro */
 .intro {
@@ -230,5 +253,6 @@ body.dark .tag-card {
 body.dark .analytics {
   background: #0f172a;
 }
+
 
 
