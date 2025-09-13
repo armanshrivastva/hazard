@@ -139,8 +139,8 @@ header {
 .btn:hover { transform: translateY(-2px); }
 
 .btn.secondary {
-  background: var(--primary);
-    color: #fff;
+  background: var(--secondary);
+   
 }
 
 .hide {
@@ -481,6 +481,7 @@ iframe {
   justify-content: center;
   flex-direction: column;
 }
+
 
 
 
