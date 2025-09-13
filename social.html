@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hazard Social Media Analytics</title>
+  <link rel="stylesheet" href="analytics.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2 class="logo">🌊 Hazard Analytics</h2>
+    <button class="theme-toggle" aria-pressed="false">🌙</button>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Social Media Hazard Trends</h1>
+    <p>Tracking Trending Hashtags for Ocean & Environmental Hazards</p>
+  </header>
+
+  <!-- Intro Section -->
+  <section class="intro">
+    <p>
+      This platform combines <b>crowdsourced hazard reports</b> with 
+      <b>social media analytics</b> to detect events such as oil spills, 
+      plastic pollution, floods, and extreme weather. 
+      By analyzing <b>trending hashtags</b>, 
+      we can gain <b>real-time awareness</b> and support timely action.
+    </p>
+  </section>
+
+  <!-- Trending Hashtags -->
+  <section class="hashtags">
+    <h2>🔥 Trending Hazard Hashtags</h2>
+    <div id="tags-container" class="tags-grid"></div>
+  </section>
+
+  <!-- Analytics Section -->
+  <section class="analytics">
+    <h2>📊 Analytics Overview</h2>
+    <p>Hashtag frequency trend (sample data)</p>
+    <canvas id="trendChart"></canvas>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="media.js"></script>
+</body>
+</html>

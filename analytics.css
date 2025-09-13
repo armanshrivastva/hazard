@@ -1,0 +1,136 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg, #f9fafb);
+  color: var(--text, #222);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e3a8a;
+  color: #fff;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  background: #3b82f6;
+  color: white;
+  padding: 25px;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Intro */
+.intro {
+  max-width: 850px;
+  margin: 30px auto;
+  font-size: 1.1rem;
+  padding: 0 15px;
+  color: var(--text, #444);
+  text-align: center;
+}
+
+/* Hashtags */
+.hashtags {
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.hashtags h2 {
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+.tags-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.tag-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-weight: bold;
+  color: #1e3a8a;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.tag-card:hover {
+  transform: translateY(-5px);
+  background: #eff6ff;
+}
+
+/* Analytics */
+.analytics {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 950px;
+  margin: 0 auto 40px auto;
+}
+
+.analytics h2 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+canvas {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+/* Dark Mode */
+body.dark {
+  --bg: #001f3f;
+  --text: #f1f5f9;
+}
+
+body.dark header {
+  background: #0f172a;
+}
+
+body.dark .tag-card {
+  background: #0f172a;
+  color: #f1f5f9;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+}
+
+body.dark .analytics {
+  background: #0f172a;
+}
