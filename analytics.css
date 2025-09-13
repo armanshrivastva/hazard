@@ -146,19 +146,6 @@ header {
   display: none;
 }
 
-/* Header */
-header {
-  background: #3b82f6;
-  color: white;
-  padding: 25px;
-  border-radius: 0 0 20px 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
 
 /* Intro */
 .intro {
@@ -243,4 +230,5 @@ body.dark .tag-card {
 body.dark .analytics {
   background: #0f172a;
 }
+
 
