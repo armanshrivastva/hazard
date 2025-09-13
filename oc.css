@@ -140,6 +140,7 @@ header {
 
 .btn.secondary {
   background: var(--primary);
+    color: #fff;
 }
 
 .hide {
@@ -480,5 +481,6 @@ iframe {
   justify-content: center;
   flex-direction: column;
 }
+
 
 
