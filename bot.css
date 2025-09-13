@@ -195,7 +195,8 @@ body {
   box-shadow: var(--shadow);
   padding: 1.5rem;
 }
-
+/* Buttons */ .btn { background: var(--primary); color: white; border: none; border-radius: var(--radius); padding: 0.6rem 1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s; } .btn:hover { transform: translateY(-2px); } 
+.btn.secondary { background: transparent; color: var(--primary); border: 1px solid rgba(0,0,0,0.1); }
 
 
 /* Report form */
@@ -299,5 +300,6 @@ footer.small {
   font-size: 0.9rem;
   color: gray;
 }
+
 
 
